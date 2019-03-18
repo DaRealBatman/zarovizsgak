@@ -22,3 +22,10 @@ MAINTAINER Gipsz Jakab  // Author
 COPY . /usr/share/nginx/html
 EXPOSE 80/tcp
 EXPOSE 80/udp
+
+// Dockerfile-ből image, az image neve legyen "ng"
+sudo docker build -t ng .
+sudo docker images          // milyen image-ek vannak a helyi gépen
+
+// image-ből konténer démonként, 80-as portot nyissa ki, konténer neve legyen "webszerver", használja a helyi "ng" nevű image-t
+sudo docker run -d -p 80:80 --name "webszerver" ng
