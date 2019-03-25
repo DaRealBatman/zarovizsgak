@@ -102,3 +102,5 @@ sudo smbpasswd -a user2 #adjuk meg a jelszót: hallgato
 
 ### 7.7 Indítsuk újra a szolgáltatást.
 sudo service smbd restart
+
+teszt kliensről: smb://ipcim/user2
