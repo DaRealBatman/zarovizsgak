@@ -72,3 +72,33 @@ sudo service smbd status
 #### 6.1 Teszteljük a megosztások meglétét:
 sudo testparm
 
+# 7. Konkrét felhasználónak is adhatunk külön megosztást:
+
+### 7.1. Felhasználó felvétele
+sudo adduser user2
+
+### 7.3 Hozzunk létre egy mappát user2 felhasználó számára írás és olvasásra:
+sudo mkdir /srv/user2
+sudo chown user2 /srv/user2
+sudo chmod 700 /srv/user2
+
+### 7.4 Nyissuk meg a konfigurációs állományt.
+sudo mcedit /etc/samba/smb.conf
+
+### 7.5 A fájl végére az alábbiakat gépeljük be:
+[user2]
+comment=írható-olvasható megosztás a user2 felhasználónak
+path=/srv/user2
+writeable=yes
+browseable=no
+public=no
+read list=user2
+writelist=user2
+force directory mode=0777
+force create mode=0777
+
+### 7.6 Vegyük fel a user2 felhasználót a Samba adatbázisba:
+sudo smbpasswd -a user2 #adjuk meg a jelszót: hallgato
+
+### 7.7 Indítsuk újra a szolgáltatást.
+sudo service smbd restart
