@@ -47,5 +47,7 @@ Environment=USER=git HOME=/home/git
 WantedBy=multi-user.target
 #############################################/etc/systemd/system/gogs.service fájl vége
 
-Ubuntu SSH-jának átrakása magasabb portra:
-/etc/ssh/sshd_config: Port 2200
+- Ubuntu SSH-jának átrakása magasabb portra (FONTOS!):
+  /etc/ssh/sshd_config: Port 2200
+- sudo shutdown -r now
+- gazdarendszerről: ssh felhnev@ip -p 2200
