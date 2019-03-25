@@ -51,3 +51,74 @@ WantedBy=multi-user.target
   /etc/ssh/sshd_config: Port 2200
 - sudo shutdown -r now
 - gazdarendszerről: ssh felhnev@ip -p 2200
+
+/home/git/custom/conf/app.ini létrehozása:
+- cd /home/git/
+  sudo mkdir custom
+  cd custom
+  sudo mkdir conf
+  cd conf
+  sudo touch app.ini
+  sudo nano app.ini
+  
+# 5. A  /home/git/custom/conf/app.ini fájl tartalma:
+#############################################/home/git/custom/conf/app.ini fájl kezdete
+APP_NAME = gogs
+RUN_USER = git
+RUN_MODE = prod
+
+[database]
+DB_TYPE  = sqlite3
+HOST     = 127.0.0.1:3306
+NAME     = gogs
+USER     = root
+PASSWD   =
+SSL_MODE = disable
+PATH     = data/gogs.db
+
+[repository]
+ROOT = /home/git/gogs-repositories
+
+[server]
+DOMAIN           = virtgepipje
+HTTP_PORT        = 80
+ROOT_URL         = http://virtgepipje:80/
+DISABLE_SSH      = false
+SSH_PORT         = 22
+START_SSH_SERVER = true
+OFFLINE_MODE     = false
+
+[mailer]
+ENABLED = false
+
+[service]
+REGISTER_EMAIL_CONFIRM = false
+ENABLE_NOTIFY_MAIL     = false
+DISABLE_REGISTRATION   = false
+ENABLE_CAPTCHA         = true
+REQUIRE_SIGNIN_VIEW    = false
+
+[picture]
+DISABLE_GRAVATAR        = false
+ENABLE_FEDERATED_AVATAR = false
+
+[session]
+PROVIDER = file
+
+[log]
+MODE      = file
+LEVEL     = Info
+ROOT_PATH = /home/git/log
+
+[security]
+INSTALL_LOCK = true
+SECRET_KEY = haoVAtD4oKMe
+#############################################/home/git/custom/conf/app.ini fájl vége
+
+sudo chown -R git:git /home/git/custom    // adjuk oda az előbb létrehozott dolgokat a "git" usernek
+
+
+sudo systemctl daemon-reload
+sudo systemctl start gogs
+sudo systemctl enable gogs
+sudo systemctl status gogs
