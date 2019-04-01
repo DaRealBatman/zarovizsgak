@@ -12,3 +12,4 @@
 - Behatolás-megelőző rendszer (IDS): ismert támadásokat tud kivédeni
 - Nethservert felügyelet nélküli telepítéssel érdemes telepíteni
   Other -> Unattended installation (rootpass: Nethesis,1234)
+- Elvileg a backup visszaállítása nem csak a beállításokat teszi vissza, hanem az eredetileg feltelepített csomagokat is
