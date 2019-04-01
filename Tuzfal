@@ -22,3 +22,4 @@
 - RSAT: "Remote Server Administration Tools for Windows 10 includes Server Manager, Microsoft Management Console (MMC) snap-ins,
   consoles, Windows PowerShell cmdlets and providers, and command-line tools for managing roles and features that run on
   Windows Server."
+- Ha RDP-n belépek egy Windows-ra, az aktív felhasználót kijelentkezteti.
