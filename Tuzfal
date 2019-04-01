@@ -23,3 +23,4 @@
   consoles, Windows PowerShell cmdlets and providers, and command-line tools for managing roles and features that run on
   Windows Server."
 - Ha RDP-n belépek egy Windows-ra, az aktív felhasználót kijelentkezteti.
+  Valami DLL fájlt ki kell cserélni, és akkor több felhasználó is tudja távolról egyszerre használni (mint a Windows Server-t).
