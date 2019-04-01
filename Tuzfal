@@ -1,3 +1,4 @@
+- FQD: Fully Qualified Domain, hostname.domain.tld
 - Zöld zóna: védett terület (LAN)(bár innen is jöhetnek támadások)
   Piros zóna: a veszélyes rész (WAN)
 - Port-szűrés: csak a szükséges portokat engedélyezzük.
