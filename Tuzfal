@@ -9,5 +9,6 @@
 - Tűzfalat alkatrészekből lehet összerakni. Router 80-as 443-as kéréseket elirányítja egy másik szerverre (a webproxyra),
   majd a proxy kapcsolódik a külső webszerverekhez.
 - Adatforgalom jellege alapján szűrés ("szakértői rendszer", "facebookra jellemző forgalom" szűrése)
-- Behatolás-megelőző rendszer (IDS): ismert támadásokat 
+- Behatolás-megelőző rendszer (IDS): ismert támadásokat tud kivédeni
 - Nethservert felügyelet nélküli telepítéssel érdemes telepíteni
+  Other -> Unattended installation (rootpass: Nethesis,1234)
