@@ -19,8 +19,15 @@
 - DPI: a csomagok payload-ját elemzi (vannak ilyen kategóriák, hogy Amazon Video, Dropbox, Deezer, VPN, stb.)
   Tiltani önmagában nem tilt, az Átjáró résznél "Tűzfal szabályok" alatt lehet tiltani (szabályt lehet DPI alapján)
 
+- Tesztkörnyezet:
+  Nethserver: 1-es hálókártya hozzá bridgelve a host hálókártyájához, 2-es hálókártya "belső csatoló" (intnet-hez)
+  Kliens (Ubuntu desktop): 1 hálókártya "belső csatoló" (intnet-hez)
+  
+
 - RSAT: "Remote Server Administration Tools for Windows 10 includes Server Manager, Microsoft Management Console (MMC) snap-ins,
   consoles, Windows PowerShell cmdlets and providers, and command-line tools for managing roles and features that run on
   Windows Server."
 - Ha RDP-n belépek egy Windows-ra, az aktív felhasználót kijelentkezteti.
   Valami DLL fájlt ki kell cserélni, és akkor több felhasználó is tudja távolról egyszerre használni (mint a Windows Server-t).
+  
+- Vizsgánál papíron pipálgatni!
