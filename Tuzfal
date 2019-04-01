@@ -1,1 +1,13 @@
-
+- Zöld zóna: védett terület (LAN)(bár innen is jöhetnek támadások)
+  Piros zóna: a veszélyes rész (WAN)
+- Port-szűrés: csak a szükséges portokat engedélyezzük.
+- Proxy: a webböngésző a proxiszerverhez kapcsolódik, és azon keresztül böngészik
+  Régebbi proxikon SSL kapcsolatok akadálytalanul átmennek (én azt hiszem, hogy titkosított kapcsolatom van a webhellyel,
+  miközben a forgalom proxy-n megy át).
+- Proxy: tartalom elemzés (vírusszűrés, tartalomszűrés), jogosultságok (ki mikor mihez férhet hozzá), naplózás,
+  tartalom cache
+- Tűzfalat alkatrészekből lehet összerakni. Router 80-as 443-as kéréseket elirányítja egy másik szerverre (a webproxyra),
+  majd a proxy kapcsolódik a külső webszerverekhez.
+- Adatforgalom jellege alapján szűrés ("szakértői rendszer", "facebookra jellemző forgalom" szűrése)
+- Behatolás-megelőző rendszer (IDS): ismert támadásokat 
+- Nethservert felügyelet nélküli telepítéssel érdemes telepíteni
