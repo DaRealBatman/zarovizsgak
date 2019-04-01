@@ -14,7 +14,7 @@
 - Nethservert felügyelet nélküli telepítéssel érdemes telepíteni
   Other -> Unattended installation (rootpass: Nethesis,1234)
 - Elvileg a backup visszaállítása nem csak a beállításokat teszi vissza, hanem az eredetileg feltelepített csomagokat is
-  (automatikus backup van)
+  (automatikus backup van, telepítés után a webes felületen az első konfigurációkor megkérdezi visszaállítson-e backupot)
 - Fail2ban: Scans log files and bans IPs with failed login
 - DPI: a csomagok payload-ját elemzi (vannak ilyen kategóriák, hogy Amazon Video, Dropbox, Deezer, VPN, stb.)
   Tiltani önmagában nem tilt, az Átjáró résznél "Tűzfal szabályok" alatt lehet tiltani (szabályt lehet DPI alapján)
