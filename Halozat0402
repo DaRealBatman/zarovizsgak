@@ -28,3 +28,6 @@ PPPoE kliens (VIZSGÁN LEHET):
   ip route 0.0.0.0 0.0.0.0 dialer 1
 Amikor létrejön a kapcsolat, a szerver routeren a Virtual-Access2.1 alinterfész megkapja a 10.1.1.254 címet (sh ip int brief)
 A kliensnek az IPCP intézi az IP-címet.
+
+- DHCP pool létrehozásakor (ip dhcp pool poolneve) a network sor legyen az utolsó, különben a DHCP-re állított klienseknek
+  kaphatnak időközben úgy IP-t, hogy még nem kap hozzá átjárót, DNS szervert (mert még nem állítottuk be).
