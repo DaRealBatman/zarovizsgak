@@ -27,3 +27,4 @@ PPPoE kliens (VIZSGÁN LEHET):
 	pppoe-client dial-pool-number 1
   ip route 0.0.0.0 0.0.0.0 dialer 1
 Amikor létrejön a kapcsolat, a szerver routeren a Virtual-Access2.1 alinterfész megkapja a 10.1.1.254 címet (sh ip int brief)
+A kliensnek az IPCP intézi az IP-címet.
