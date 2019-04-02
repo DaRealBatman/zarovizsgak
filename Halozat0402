@@ -1,1 +1,29 @@
-
+PPPoE szerver:
+- username wrt password cisco
+  username R1user password cisco
+  ip local pool pppoe 10.1.1.1 10.1.1.253	// a "pppoe" a pool neve
+  int virtual-Template 1					// sablon interfész
+    ip unnumbered g0/0/1					// nincs ip-címe, a g0/0/1 ip-címét használja
+	peer default ip address pool pppoe		// a "pppoe" nevű pool-ból adjon IP-t a PPPoE klienseknek
+	ppp authentication chap
+  bba-group pppoe global					// Csinál egy Virtual-Access2 nevű interfészt
+											// (ezen fognak alinterfészek létrejönni amikor valaki PPPoE becsatlakozik)
+    virtual-template 1						// sablon interfész hozzárendelése
+  int g0/0/1
+    ip add 10.1.1.254 255.255.255.0			// mindegyik alinterfésznek ez lesz az IP-je
+	pppoe enable group global
+	no shut
+PPPoE kliens (VIZSGÁN LEHET):
+- int dialer 1
+    dialer pool 1
+	encapsulation ppp
+	ip address negotiated
+	mtu 1492								// 1500 helyett 1492 byte (extra fejléc miatt)
+	ppp authentication chap
+	ppp chap hostname R1user
+	ppp chap password cisco
+  int g0/0/1
+    pppoe enable
+	pppoe-client dial-pool-number 1
+  ip route 0.0.0.0 0.0.0.0 dialer 1
+Amikor létrejön a kapcsolat, a szerver routeren a Virtual-Access2.1 alinterfész megkapja a 10.1.1.254 címet (sh ip int brief)
