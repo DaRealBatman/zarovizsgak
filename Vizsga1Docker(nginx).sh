@@ -1,5 +1,6 @@
 #!/bin/bash
 # lefuttatása sudo ./scriptneve.sh
+# NEM PROBÁLTAM KI
 apt-get update
 apt-install nmap
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
