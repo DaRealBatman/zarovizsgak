@@ -1,3 +1,4 @@
 - sudo adduser felhnev		                // felhasználó létrehozása
 - sudo groupadd csoportnev	              // csoport létrehozása
 - sudo usermod -a -G csoportnev felhnev		// létező csoporthoz létező felhasználó hozzáadása
+- mappán "keresési jog": x
