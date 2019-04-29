@@ -3,7 +3,8 @@
 - sudo usermod -a -G csoportnev felhnev		// létező csoporthoz létező felhasználó hozzáadása
 - mappán "keresési jog": x
 
-- cd mappanev
+- Git kurvasok pontot számít!
+  cd mappanev
   git clone ...
   bemásolni a kért fájlokat a repóba
   cd-vel belépünk a lokális repóba
