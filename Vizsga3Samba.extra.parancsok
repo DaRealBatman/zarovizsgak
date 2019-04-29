@@ -8,7 +8,8 @@
   bemásolni a kért fájlokat a repóba
   cd-vel bemlépünk a lokális repóba
   git add .
-  git commit -m'elso'
+  git commit -m'elso' (nem fog működni)
   git config --global user.email "emailcím"
   git config --globas user.name "név"
+  git commit -m'elso'
   git push
