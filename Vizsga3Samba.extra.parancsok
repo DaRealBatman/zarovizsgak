@@ -1,12 +1,12 @@
 - sudo adduser felhnev		                // felhasználó létrehozása
 - sudo groupadd csoportnev	              // csoport létrehozása
 - sudo usermod -a -G csoportnev felhnev		// létező csoporthoz létező felhasználó hozzáadása
-- mappán "keresési jog": x
+- mappán "keresési jog":
 
 - Git kurvasok pontot számít!
   cd mappanev
   git clone ...
-  bemásolni a kért fájlokat a repóba
+  bemásolni a kért fájlokat a repóba (mappa másolása: cp -R /srv .)
   cd-vel belépünk a lokális repóba
   git add .
   git commit -m'elso' (nem fog működni)
