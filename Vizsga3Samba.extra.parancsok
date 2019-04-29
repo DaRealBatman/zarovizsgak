@@ -2,3 +2,13 @@
 - sudo groupadd csoportnev	              // csoport létrehozása
 - sudo usermod -a -G csoportnev felhnev		// létező csoporthoz létező felhasználó hozzáadása
 - mappán "keresési jog": x
+
+- cd mappanev
+  git clone ...
+  bemásolni a kért fájlokat a repóba
+  cd-vel bemlépünk a lokális repóba
+  git add .
+  git commit -m'elso'
+  git config --global user.email "emailcím"
+  git config --globas user.name "név"
+  git push
