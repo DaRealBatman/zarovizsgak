@@ -8,3 +8,9 @@
 - Konténer IP-je? Nmap-al szkennelni a docker interfészhez (ip a-ban) tartozó hálózatot
   (pl. nmap 172.17.0.0/24)
 - Feljegyzett adatok readme.md-be mehet!
+
+Samba
+- tar.gz: (tar jogosultságokat átvisz, sima zip nem képes erre)
+  mkdir konyvtarneve, cd konyvtarneve, touch filenev, mkdir megegymappa...
+  mc -> bemegyek a könyvtárba amiből tar-t akarok csinálni -> F2 (menü) -> 3 (Compress the current subdirectory (tar.gz)), enter
+  a tar.gz a könyvtáron kívül (egyel fentebb) keletkezik.
