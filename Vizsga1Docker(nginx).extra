@@ -14,3 +14,4 @@ Samba
   mkdir konyvtarneve, cd konyvtarneve, touch filenev, mkdir megegymappa...
   mc -> bemegyek a könyvtárba amiből tar-t akarok csinálni -> F2 (menü) -> 3 (Compress the current subdirectory (tar.gz)), enter
   a tar.gz a könyvtáron kívül (egyel fentebb) keletkezik.
+- Trükk: Először feltölteni a screenshotokat a github repóba (webes felületen), utána leklónozni a virtuális gépre
