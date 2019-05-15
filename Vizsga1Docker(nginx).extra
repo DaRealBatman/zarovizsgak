@@ -5,3 +5,5 @@
   </head>
   <body>
   </body>
+- Konténer IP-je? Nmap-al szkennelni a docker interfészhez (ip a-ban) tartozó hálózatot
+  (pl. nmap 172.17.0.0/24)
